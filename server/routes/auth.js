@@ -28,7 +28,7 @@ async function sendOtpEmail(to, code) {
   const transporter = await getEmailTransporter();
   
   const info = await transporter.sendMail({
-    from: process.env.SMTP_FROM || '"PicklePerfect" <no-reply@pickleperfect.local>',
+  from: process.env.SMTP_FROM || '"The Tasty Kitchen" <no-reply@tastykitchen.local>',
     to,
     subject: 'Your verification code',
     text: `Your verification code is ${code}. It expires in 10 minutes.`,

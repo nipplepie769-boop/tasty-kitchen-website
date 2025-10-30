@@ -1,7 +1,7 @@
 {
-  "name": "pickleperfect-server",
+  "name": "tasty-kitchen-server",
   "version": "1.0.0",
-  "description": "Backend for PicklePerfect e-commerce site",
+  "description": "Backend for The Tasty Kitchen e-commerce site",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

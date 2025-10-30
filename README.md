@@ -1,73 +1,39 @@
-# Welcome to your Lovable project
+# The Tasty Kitchen
 
-## Project info
+This repository contains a small e-commerce front-end built with Vite, React and Tailwind CSS for The Tasty Kitchen.
 
-**URL**: https://lovable.dev/projects/0787ccd1-64f1-463d-b3a3-ae34ef670a3e
+Quick start (development):
 
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/0787ccd1-64f1-463d-b3a3-ae34ef670a3e) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+```powershell
+# clone
 git clone <YOUR_GIT_URL>
+cd the-tasty-kitchen
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# install
+npm install
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# run dev server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Build for production:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```powershell
+npm run build
+# preview the production build locally
+npm run preview
+```
 
-**Use GitHub Codespaces**
+Deployment
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- This project includes a GitHub Actions workflow to build and publish the `dist` folder to GitHub Pages. To deploy from your account:
+	1. Create a repository named `the-tasty-kitchen` under your GitHub account.
+	2. Push this code to the `main` branch.
+	3. The provided workflow will run automatically and publish to `https://<your-username>.github.io/the-tasty-kitchen/`.
 
-## What technologies are used for this project?
+Notes
 
-This project is built with:
+- The project uses local assets for social preview images. Update `index.html` if you want a custom Open Graph image.
+- If you change the repository name or host under a custom domain, update `vite.config.ts` `base` to match your production path.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/0787ccd1-64f1-463d-b3a3-ae34ef670a3e) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+If you want help finishing the deployment steps or customizing the site copy/branding, tell me what you'd like to change.

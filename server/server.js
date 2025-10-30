@@ -17,7 +17,7 @@ app.use(express.json());
 // Connect to MongoDB
 async function connectDB() {
   try {
-    await mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/pickleperfect', {
+  await mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/tasty_kitchen', {
       useNewUrlParser: true,
       useUnifiedTopology: true
     });
