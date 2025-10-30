@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+/* Import Gabriola font using @font-face */
+@font-face {
+  font-family: 'Gabriola';
+  src: local('Gabriola');
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+  --background: 270 40% 85%;
+    --foreground: 145 35% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 145 35% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 145 35% 15%;
+
+    --primary: 145 45% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 35 75% 88%;
+    --secondary-foreground: 145 35% 15%;
+
+    --muted: 42 40% 90%;
+    --muted-foreground: 145 20% 40%;
+
+    --accent: 15 75% 85%;
+    --accent-foreground: 145 35% 15%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 145 30% 85%;
+    --input: 145 30% 85%;
+    --ring: 145 45% 45%;
+
+    --radius: 1rem;
+
+    /* Pickle brand colors */
+    --pickle-green: 145 45% 45%;
+    --pickle-mint: 155 40% 75%;
+    --pickle-yellow: 45 90% 70%;
+    --pickle-peach: 15 75% 85%;
+    --pickle-lavender: 270 40% 85%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(155 40% 75%) 0%, hsl(42 68% 95%) 50%, hsl(270 40% 85%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsla(145, 45%, 45%, 0.1);
+    --shadow-hover: 0 8px 30px hsla(145, 45%, 45%, 0.15);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 145 25% 10%;
+    --foreground: 155 20% 90%;
+
+    --card: 145 20% 14%;
+    --card-foreground: 155 20% 90%;
+
+    --popover: 145 20% 14%;
+    --popover-foreground: 155 20% 90%;
+
+    --primary: 145 50% 55%;
+    --primary-foreground: 145 25% 10%;
+
+    --secondary: 145 20% 20%;
+    --secondary-foreground: 155 20% 90%;
+
+    --muted: 145 15% 18%;
+    --muted-foreground: 155 15% 60%;
+
+    --accent: 45 60% 50%;
+    --accent-foreground: 145 25% 10%;
+
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 155 20% 90%;
+
+    --border: 145 15% 25%;
+    --input: 145 15% 25%;
+    --ring: 145 50% 55%;
+
+    /* Dark mode pickle colors */
+    --pickle-green: 145 50% 55%;
+    --pickle-mint: 155 35% 40%;
+    --pickle-yellow: 45 70% 55%;
+    --pickle-peach: 15 60% 50%;
+    --pickle-lavender: 270 30% 50%;
+
+    /* Dark gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(145 30% 20%) 0%, hsl(145 25% 12%) 50%, hsl(145 20% 15%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
+    
+    /* Dark shadows */
+    --shadow-soft: 0 4px 20px hsla(0, 0%, 0%, 0.3);
+    --shadow-hover: 0 8px 30px hsla(145, 50%, 55%, 0.2);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-cursive {
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .font-body {
+    font-family: 'Poppins', sans-serif;
+  }
+}
